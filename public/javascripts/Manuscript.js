@@ -8,7 +8,7 @@ Manuscript.bboxToStyle = function(bbox_str) {
   arr = bbox_str.split(" ");
   left_pos = "left:"+arr[1]+"px; ";
   top_pos = "top:"+arr[2]+"px; ";
-  right_pos = "right:"+arr[3]+"px; ";
-  bottom_pos = "bottom:"+arr[4]+"px; ";
-  return left_pos + top_pos + right_pos + bottom_pos;
+  width = "width:"+(arr[3]-arr[1])+"px; ";
+  height = "height:"+(arr[4]-arr[2])+"px; ";
+  return left_pos + top_pos + width + height;
 };
